@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saran Prakash Raja | Full-Stack Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo">RSP.</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <button id="view-resume-btn" class="resume-btn">
+                <i class="fas fa-file-alt"></i>
+                View Resume
+            </button>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    
+    <main>
+        <section id="about" class="full-page active">
+            <div class="about-content">
+                <div class="text-content">
+                    <h1 class="animated-text">Hello, I'm <span>Saran Prakash Raja</span></h1>
+                    <h2 class="typing-text">Full-Stack Developer</h2>
+                    <p class="intro">
+                        B.Tech Student passionate about creating elegant, functional web applications. 
+                        Self-taught developer with a keen eye for design and problem-solving.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary">View My Work</a>
+                        <a href="#contact" class="btn secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="visual-content">
+                    <div class="profile-container">
+                        <img src="images/profile.jpg" alt="Saran Prakash Raja" class="profile-img">
+                        <div class="circle-animation"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects" class="full-page">
+            <div class="section-header">
+                <h2>My <span>Projects</span></h2>
+                <p>Here are some of my recent works</p>
+            </div>
+            <div class="projects-container">
+                <div class="project-card" data-project="bifrost">
+                    <div class="project-image-wrapper bifrost-bg">
+                        <img src="images/Bifrost.jpg" alt="Social Credits Project" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <p class="project-description">Image to Code Converter that bridges design and development</p>
+                                <button class="view-details-btn">Explore <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-title">
+                        <h3>Bifrost</h3>
+                        <div class="project-tech">
+                            <span>HTML | CSS | JS</span>
+                            <span>Python + Django</span>
+                            <span>MYSQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-project="social-credits">
+                    <div class="project-image-wrapper">
+                        <img src="images/social-credits.jpg" alt="Social Credits Project" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <p class="project-description">Reward system for positive social activities</p>
+                                <button class="view-details-btn">Explore <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-title">
+                        <h3>Social Credits</h3>
+                        <div class="project-tech">
+                            <span>HTML | CSS | JS</span>
+                            <span>Python + Django</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-project="skill-swap">
+                    <div class="project-image-wrapper">
+                        <img src="images/skill-swap.jpg" alt="Skill Swap Project" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <p class="project-description">Peer-to-peer skill exchange platform</p>
+                                <button class="view-details-btn">Explore <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-title">
+                        <h3>Skill Swap</h3>
+                        <div class="project-tech">
+                            <span>HTML | CSS | JS</span>
+                            <span>Python + Django</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="project-details" class="project-details-container">
+                <!-- Dynamic content will be inserted here by JavaScript -->
+            </div>
+        </section>
+        
+        <section id="skills" class="full-page">
+            <div class="section-header">
+                <h2>My <span>Skills</span></h2>
+                <p>Technologies I work with</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="advanced">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item" data-level="advanced">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item" data-level="intermediate">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="intermediate">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item" data-level="intermediate">
+                            <i class="fas fa-database"></i>
+                            <span>Django</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Database</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="intermediate">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="full-page">
+            <div class="section-header">
+                <h2>Get In <span>Touch</span></h2>
+                <p>Let's work together</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>saranprakashmessi@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 9843996163</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Tamil Nadu, India</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/saranprakash18" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/saranprakashraja" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="resume-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <iframe id="resume-iframe" src="" frameborder="0"></iframe>
+            <div class="modal-actions">
+                <a id="download-resume" href="#" class="download-btn">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="cursor"></div>
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html> 
