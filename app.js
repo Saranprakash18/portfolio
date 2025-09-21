@@ -10,7 +10,7 @@ class AdvancedPortfolio {
                 title: "Bifrost",
                 category: "web",
                 description: "AI-powered image-to-code converter that transforms UI screenshots into HTML & CSS. Built with Django, OpenCV, and EasyOCR.",
-                image: "images/Bifrost.png",
+                image: "images/bifrost.png",
                 technologies: ["Python", "Django", "OpenCV", "EasyOCR", "JavaScript", "Tailwind CSS"],
                 link: "#",
                 github: "https://github.com/Saranprakash18/bifrost"
