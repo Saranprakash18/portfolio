@@ -1,230 +1,290 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-color-scheme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saran Prakash Raja | Software Developer</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Saran Prakash | Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <nav class="navbar">
-        <div class="logo">RSP.</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <button id="view-resume-btn" class="resume-btn">
-                <i class="fas fa-file-alt"></i>
-                View Resume
-            </button>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Loading Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">RSP</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-sun" id="themeIcon"></i>
+                </button>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </nav>
-    
-    <main>
-        <section id="about" class="full-page active">
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <canvas class="particles-canvas" id="particlesCanvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="accent-text">Saran Prakash Raja</span>
+                </h1>
+                <div class="typing-container">
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-subtitle">
+                    Passionate full-stack developer with 1 years of experience creating 
+                    modern web applications and user experiences.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn--primary hero-btn">
+                        <i class="fas fa-eye"></i>View Work
+                    </a>
+                    <a href="#contact" class="btn btn--outline hero-btn">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
             <div class="about-content">
-                <div class="text-content">
-                    <h1 class="animated-text">Hello, I'm <span>Saran Prakash Raja</span></h1>
-                    <h2 class="typing-text">Software Developer</h2>
-                    <p class="intro">
-                        B.Tech Student passionate about creating elegant, functional web applications. 
-                        Self-taught developer with a keen eye for design and problem-solving.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn primary">View My Work</a>
-                        <a href="#contact" class="btn secondary">Contact Me</a>
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="images/Sarann.png" alt="Alex Morgan" class="profile-img">
+                        <div class="image-overlay"></div>
                     </div>
                 </div>
-                <div class="visual-content">
-                    <div class="profile-container">
-                        <img src="images/profile.jpg" alt="Saran Prakash Raja" class="profile-img">
-                        <div class="circle-animation"></div>
+                <div class="about-text">
+                    <div class="about-tabs">
+                        <button class="tab-button active" data-tab="about">About</button>
+                        <button class="tab-button" data-tab="experience">Experience</button>
+                        <button class="tab-button" data-tab="education">Education</button>
                     </div>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <span>Scroll Down</span>
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="projects" class="full-page">
-            <div class="section-header">
-                <h2>My <span>Projects</span></h2>
-                <p>Here are some of my recent works</p>
-            </div>
-            <div class="projects-container">
-                <div class="project-card" data-project="bifrost">
-                    <div class="project-image-wrapper bifrost-bg">
-                        <img src="images/Bifrost.jpg" alt="Social Credits Project" class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-info">
-                                <p class="project-description">Image to Code Converter that bridges design and development</p>
-                                <button class="view-details-btn">Explore <i class="fas fa-arrow-right"></i></button>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="about-tab">
+                            <p>I'm a passionate full-stack developer with expertise in modern web technologies. I love creating beautiful, functional applications that solve real-world problems.</p>
+                            <p>My journey in web development started this year, and since then, I've worked on several projects</p>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <span class="stat-number" data-target="6">0</span>
+                                    <span class="stat-label">Projects Completed</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number" data-target="1">0</span>
+                                    <span class="stat-label">Years Experience</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="experience-tab">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2025</div>
+                                    <div class="timeline-content">
+                                        <h4>Bifrost – Image to Code Converter</h4>
+                                        <p class="company">Personal Project</p>
+                                        <p>Built an AI-powered web app that converts UI images into HTML & CSS using Python (Django), OpenCV, and EasyOCR. Integrated cloud storage and history tracking features.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2025</div>
+                                    <div class="timeline-content">
+                                        <h4>Barter – Product Exchange Platform</h4>
+                                        <p class="company">Personal Project</p>
+                                        <p>Developed a Django-based platform for exchanging products of equal value. Designed authentication, dashboards, and interactive UI using HTML, CSS, and JavaScript.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2024</div>
+                                    <div class="timeline-content">
+                                        <h4>Weather_Now – Live Weather App</h4>
+                                        <p class="company">Personal Project</p>
+                                        <p>Created a responsive web app fetching live weather data via APIs, with a clean UI built using HTML, CSS, JavaScript, and Bootstrap.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2024</div>
+                                    <div class="timeline-content">
+                                        <h4>Social Credits URL Shortener</h4>
+                                        <p class="company">Personal Project</p>
+                                        <p>Developed a URL shortener web application with analytics tracking. Built with Django, SQLite, and front-end styling in Tailwind CSS.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="education-tab">
+                            <div class="education-list">
+                                <div class="education-item">
+                                    <h4>Bachelor of Technology in Artificial Intelligence and Data Science</h4>
+                                    <p class="university">Sri Shakthi Institute of Engineering and Technology</p>
+                                    <p class="year">2022 - 2026</p>
+                                    <p>Pursuing final year with focus on Data Science, Web Development, and Artificial Intelligence.</p>
+                                </div>
+                                <div class="education-item">
+                                    <h4>Full Stack Development (Self Projects + Online Courses)</h4>
+                                    <p class="university">Udemy / YouTube</p>
+                                    <p class="year">2024 - 2025</p>
+                                    <p>Hands-on learning through projects like Bifrost, Barter, Weather_Now, and Social Credits URL Shortener using Django, React, Tailwind, and APIs.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="project-title">
-                        <h3>Bifrost</h3>
-                        <div class="project-tech">
-                            <span>HTML | CSS | JS</span>
-                            <span>Python + Django</span>
-                            <span>MYSQL</span>
-                        </div>
-                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
                 
-                <div class="project-card" data-project="social-credits">
-                    <div class="project-image-wrapper">
-                        <img src="images/social-credits.jpg" alt="Social Credits Project" class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-info">
-                                <p class="project-description">Reward system for positive social activities</p>
-                                <button class="view-details-btn">Explore <i class="fas fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-title">
-                        <h3>Social Credits</h3>
-                        <div class="project-tech">
-                            <span>HTML | CSS | JS</span>
-                            <span>Python + Django</span>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-project="skill-swap">
-                    <div class="project-image-wrapper">
-                        <img src="images/skill-swap.jpg" alt="Skill Swap Project" class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-info">
-                                <p class="project-description">Peer-to-peer skill exchange platform</p>
-                                <button class="view-details-btn">Explore <i class="fas fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-title">
-                        <h3>Skill Swap</h3>
-                        <div class="project-tech">
-                            <span>HTML | CSS | JS</span>
-                            <span>Python + Django</span>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-                </div>
+                <button class="filter-btn" data-filter="design">Design</button>
             </div>
-            
-            <div id="project-details" class="project-details-container">
-                <!-- Dynamic content will be inserted here by JavaScript -->
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be populated by JavaScript -->
             </div>
-        </section>
-        
-        <section id="skills" class="full-page">
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
             <div class="section-header">
-                <h2>My <span>Skills</span></h2>
-                <p>Technologies I work with</p>
+                <h2 class="section-title">Skills</h2>
+                <div class="section-line"></div>
             </div>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-level="advanced">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="skill-item" data-level="advanced">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="skill-item" data-level="intermediate">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-level="intermediate">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item" data-level="intermediate">
-                            <i class="fas fa-database"></i>
-                            <span>Django</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Database</h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-level="intermediate">
-                            <i class="fas fa-database"></i>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="skills-grid" id="skillsGrid">
+                <!-- Skills will be populated by JavaScript -->
             </div>
-        </section>
-        
-        <section id="contact" class="full-page">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
             <div class="section-header">
-                <h2>Get In <span>Touch</span></h2>
-                <p>Let's work together</p>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
             </div>
-            <div class="contact-container">
+            <div class="contact-content">
                 <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>saranprakashmessi@gmail.com</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+91 9843996163</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Tamil Nadu, India</span>
+                    <h3>Let's Work Together</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your ideas to life.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>saranprakashmessi@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9843996163</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Coimbatore, TamilNadu</span>
+                        </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/saranprakash18" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/saranprakashraja" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
+                        <a href="https://github.com/saranprakash18" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/saranprakashraja/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                     </div>
-                    
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" class="form-control" placeholder=" " required>
+                                <label for="name" class="form-label">Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" class="form-control" placeholder=" " required>
+                                <label for="email" class="form-label">Email</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder=" " required>
+                            <label for="subject" class="form-label">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="form-control" rows="6" placeholder=" " required></textarea>
+                            <label for="message" class="form-label">Message</label>
+                        </div>
+                        <button type="submit" class="btn btn--primary form-submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading hidden">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </span>
+                        </button>
+                    </form>
                 </div>
             </div>
-        </section>
-    </main>
-    <div id="resume-modal" class="modal">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal hidden" id="projectModal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <iframe id="resume-iframe" src="" frameborder="0"></iframe>
-            <div class="modal-actions">
-                <a id="download-resume" href="#" class="download-btn">
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be populated by JavaScript -->
             </div>
         </div>
     </div>
-    <div class="cursor"></div>
-    <script src="js/main.js"></script>
-    <script src="js/projects.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="app.js"></script>
+
 </body>
-</html> 
+</html>
