@@ -70,18 +70,18 @@ class AdvancedPortfolio {
 
 
         this.skills = [
-            {"name": "Python", "percentage": 80, "icon": "fab fa-python"},
-            {"name": "Django", "percentage": 70, "icon": "fas fa-server"},
-            {"name": "JavaScript", "percentage": 70, "icon": "fab fa-js-square"},
+            {"name": "Python", "percentage": 70, "icon": "fab fa-python"},
+            {"name": "Django", "percentage": 60, "icon": "fas fa-server"},
+            {"name": "JavaScript", "percentage": 60, "icon": "fab fa-js-square"},
             {"name": "React", "percentage": 60, "icon": "fab fa-react"},
             {"name": "Tailwind CSS", "percentage": 70, "icon": "fas fa-paint-brush"},
             {"name": "HTML5", "percentage": 80, "icon": "fab fa-html5"},
             {"name": "CSS3", "percentage": 80, "icon": "fab fa-css3-alt"},
-            {"name": "SQL / MySQL", "percentage": 75, "icon": "fas fa-database"},
+            {"name": "SQL / MySQL", "percentage": 70, "icon": "fas fa-database"},
             {"name": "Git & GitHub", "percentage": 85, "icon": "fab fa-git-alt"},
             {"name": "OpenCV / EasyOCR", "percentage": 60, "icon": "fas fa-camera"},
             {"name": "Bootstrap", "percentage": 70, "icon": "fab fa-bootstrap"},
-            {"name": "REST APIs", "percentage": 70, "icon": "fas fa-network-wired"}
+            {"name": "REST APIs", "percentage": 60, "icon": "fas fa-network-wired"}
         ];
 
 
@@ -101,7 +101,6 @@ class AdvancedPortfolio {
         this.startTypingAnimation();
         this.hideLoadingScreen();
         this.initIntersectionObserver();
-        this.initTestimonialSlider();
         this.updateActiveNavLink();
     }
 
@@ -563,33 +562,6 @@ class AdvancedPortfolio {
         });
     }
 
-    initTestimonialSlider() {
-        setInterval(() => {
-            this.nextTestimonial();
-        }, 5000);
-    }
-
-    showTestimonial(index) {
-        const testimonials = document.querySelectorAll('.testimonial-item');
-        const dots = document.querySelectorAll('.dot');
-
-        testimonials.forEach(testimonial => {
-            testimonial.classList.remove('active');
-        });
-        dots.forEach(dot => {
-            dot.classList.remove('active');
-        });
-
-        testimonials[index].classList.add('active');
-        dots[index].classList.add('active');
-        this.currentTestimonial = index;
-    }
-
-    nextTestimonial() {
-        const testimonials = document.querySelectorAll('.testimonial-item');
-        this.currentTestimonial = (this.currentTestimonial + 1) % testimonials.length;
-        this.showTestimonial(this.currentTestimonial);
-    }
 
     handleFormSubmit(e) {
         e.preventDefault();

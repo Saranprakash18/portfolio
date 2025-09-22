@@ -982,7 +982,7 @@ body {
 }
 
 .accent-text {
-  background: var(--portfolio-gradient);
+  background-color: rgb(26, 174, 233);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1039,9 +1039,9 @@ body {
 }
 
 .btn--primary {
-  background: var(--portfolio-gradient);
-  color: white;
-  border: none;
+  background: transparent;
+  color: var(--portfolio-accent-blue);
+  border: 2px solid var(--portfolio-accent-blue);
 }
 
 .btn--outline {
@@ -1052,13 +1052,16 @@ body {
 
 .btn--primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+  background: rgba(0, 204, 255, 0.50);
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.5);
 }
 
 .btn--outline:hover {
-  background: var(--portfolio-accent-blue);
+  background: rgba(0, 204, 255, 0.50);
   color: white;
   transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.5);
 }
 
 .scroll-indicator {
@@ -1383,7 +1386,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 212, 255, 0.9);
+  background: rgba(0, 0, 0, 0.50);
   display: flex;
   align-items: center;
   justify-content: center;
