@@ -73,8 +73,6 @@ class AdvancedPortfolio {
             {"name": "Python", "percentage": 70, "icon": "fab fa-python"},
             {"name": "Django", "percentage": 60, "icon": "fas fa-server"},
             {"name": "JavaScript", "percentage": 60, "icon": "fab fa-js-square"},
-            {"name": "React", "percentage": 60, "icon": "fab fa-react"},
-            {"name": "Tailwind CSS", "percentage": 70, "icon": "fas fa-paint-brush"},
             {"name": "HTML5", "percentage": 80, "icon": "fab fa-html5"},
             {"name": "CSS3", "percentage": 80, "icon": "fab fa-css3-alt"},
             {"name": "SQL / MySQL", "percentage": 70, "icon": "fas fa-database"},
